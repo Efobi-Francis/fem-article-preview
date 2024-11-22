@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+:root{
+    --VeryDarkGrayishBlue: hsl(217, 19%, 35%);
+    --DesaturatedDarkBlue: hsl(214, 17%, 51%);
+    --GrayishBlue: hsl(212, 23%, 69%);
+    --LightGrayishBlue: hsl(210, 46%, 95%);
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--LightGrayishBlue);
+    font-family: Manrope;
+    color: var(--VeryDarkGrayishBlue);
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+}
+
+main{
+    background-color: white;
+    height: fit-content;
+    margin: auto 24px;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0 10px 30px -22px var(--DesaturatedDarkBlue);
+}
+
+#background-img{
+    background-image: url('./images/drawers.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    min-height: 230px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+section{
+    padding: 0 24px;
+}
+
+#headline{
+    font-weight: 700;
+    margin-bottom: 15px ;
+    margin-top: 30px;
+}
+
+.intro{
+    margin-bottom: 25px;
+}
+
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.info{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.info #avatar{
+    width: 15%;
+    height: 15%;
+    border-radius: 50%;
+}
+
+.info p{
+    display: flex;
+    flex-direction: column;
+    font-size: 13px;
+}
+
+.info span{
+    font-weight: 700;
+}
+
+.share{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--LightGrayishBlue);
+    width: 20px;
+    height: 20px;
+    padding: 10px;
+    border-radius: 50%;
+    z-index: 999;
+}
+
+.share-icon{
+    fill: white;
+}
+
+.share-bg-mobile{
+    background-color: var(--DesaturatedDarkBlue);
+}
+
+.share-show-mobile{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--VeryDarkGrayishBlue);
+    height: 70px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: flex;
+    align-items: center;
+    color: white;
+    padding: 0 24px;
+}
+
+.share-show-desktop{
+    display: none;
+}
+
+.share-show-mobile p{
+    letter-spacing: 0.4em;
+    margin-right: 20px;
+}
+
+.share-show-mobile .socials{
+    display: inline-flex;
+}
+
+.share-show-mobile .socials img{
+    width: 50%;
+    height: 50%;
+    margin-right: 20px;
+}
+
+.hide-mobile{
+    display: none;
+}
+
+
+@media screen and (min-width: 720px) {
+    body{
+        gap: 30px;
+    }
+
+    main{
+        display: flex;
+        width: 720px;
+        margin: 0 auto;
+    }
+
+    #headline{
+        font-size: 20px;
+    }
+
+    .intro{
+        position: relative;
+        font-size: 13px;
+        margin-bottom: 10px;
+    }
+
+    section{
+        padding: 0 40px;
+    }
+
+    #background-img{
+        width: 100%;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 10px;
+    }
+
+    .share-show-mobile{
+        display: none;
+    }
+
+    .share-show-desktop{
+        position: absolute;
+        top: 0;
+        width: 220px;
+        right: -31%;
+        background-color: var(--VeryDarkGrayishBlue);
+        height: 55px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        color: var(--GrayishBlue);
+        padding: 0 24px;
+        box-shadow: 0 20px 30px -22px var(--DesaturatedDarkBlue);
+    }
+
+    #share-container{
+        position: relative;
+        width: 100%;
+        
+    }
+
+    #social-container{
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        padding: 0 24px;
+    }
+
+    #social-container span:nth-child(1){
+        letter-spacing: 0.4em;
+    }
+
+    #social-container span:nth-child(2){
+        display: inline-flex;
+        gap: 15px;
+        justify-content: center;
+    }
+
+    .footer{
+        margin-bottom: 10px;
+    }
+
+    #arrow-down{
+        position: absolute;
+        bottom: -120%;
+        right: 0;
+        left: 0;
+        margin: 0 auto;
+        background-color: var(--VeryDarkGrayishBlue);
+        width: 20px;
+        height: 20px;
+        rotate: 45deg;
+    }
+    
+    .share-bg-desktop{
+        background-color: var(--DesaturatedDarkBlue);
+    }
+
+    .hide-desktop{
+        display: none;
+    }
+}
