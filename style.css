@@ -114,7 +114,7 @@ section{
     border-bottom-right-radius: 10px;
     display: flex;
     align-items: center;
-    color: white;
+    color: var(--GrayishBlue);
     padding: 0 24px;
 }
 
